@@ -1,0 +1,128 @@
+  .container {
+    width: 100vw;
+    height: 100vh;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .btn-primary {
+    width: 150px;
+    height: 50px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 20px;
+  }
+  
+  .prog{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+  }
+
+  .show-hide{
+    position: absolute;
+    top: -22px;
+    right: 10px;
+  }
+
+  .show-hide button{
+    width: 50px;
+    border: none;
+    background-color: rgb(13,110,253);
+    color: white;
+    border-radius: 5px 5px 0px 0px;
+  }
+
+  .canvas {
+    width: 100vw;
+    height: 120px;
+    background-color: #f8f9fa;
+    border-radius: 15px 15px 0px 0px;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    /* transition: opacity 0.5s, display 3s allow-discrete; */
+    /* transition: opacity 2000ms, visibility 2000ms; */
+  }
+  
+  .canvas-body {
+    padding: 20px;
+    text-align: start;
+    text-transform: capitalize;
+  }
+  
+  .progress {
+    height: 10px;
+    background-color: #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    color: white;
+    font-weight: bold;
+    background-color: rgb(13,110,253);
+    transition: width 0.5s ease;
+  }
+
+  .canvas-perc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  @media (max-width: 768px) {
+    .btn-primary, .btn-secondary {
+      width: 100%;
+    }
+  
+    .canvas {
+      /* height: 250px; */
+    }
+  }
+
+  .toaster-success {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    background-color: #4CAF50; 
+    color: white;
+    padding: 15px 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(-10px);
+  }
+
+  .toaster-success.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .toaster-success .icon {
+    margin-right: 10px;
+    font-size: 18px;
+  }
+
+
+  .toaster-success .close-btn {
+    margin-left: auto;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .toaster-success .close-btn:hover {
+    color: #ddd;
+  }
